@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+    <script>
+      function setStoreValues() {
+          
+        sessionStorage.setItem("favColor",document.getElementById("color").value);
+        sessionStorage.setItem("username",document.getElementById("name").value);
+        sessionStorage.setItem("password",document.getElementById("password").value);
+        sessionStorage.setItem("password",document.getElementById("cnpassword").value);
+      }
+      function getStoreValues() {
+        document.getElementById("name").value =sessionStorage.getItem("username");
+        document.getElementById("color").value =sessionStorage.getItem("favColor");
+        document.getElementById("password").value = sessionStorage.getItem("password");
+        document.getElementById("cnpassword").value = sessionStorage.getItem("password");
+        document.getElementById("bodystyle").style = `background-color:${sessionStorage.getItem("favColor")}`;
+      }
+    </script>
+  </head>
+  <style>
+    Form {
+      margin: 10px;
+      padding: 20px;
+      border: 3px;
+      background-color: aqua;
+      width: 400px;
+      color: teal;
+    }
+    input {
+      margin: auto;
+      padding: auto;
+    }
+  </style>
+  <body id="bodystyle">
+    <h1>Form</h1>
+    <hr />
+    <form border="3px">
+      <label>Name:</label>
+      <input type="text" id="name" placeholder="Enter name" />
+      <br />
+      <br />
+      <label>Password</label>
+      <input type="text" id="password" placeholder="Enter password" />
+      <br />
+      <br />
+      <label>Comfirm Password</label>
+      <input type="text" id="cnpassword" placeholder="Enter password" />
+      <br />
+      <br />
+      <label>Select Gender</label>
+      <input type="radio" value="Male" name="Gender" />Male
+      <input type="radio" value="Mfemale" name="Gender" />female
+      <br />
+      <br />
+      <label>Choose youe favorate color</label>
+      <input type="color" id="color" />
+      <br />
+      <br />
+      <label>DOB</label>
+      <input type="date" />
+      <br />
+      <button onclick="setStoreValues()">Submit</button>
+      <button onclick="setStoreValues">Cancel</button>
+    </form>
+  </body>
+  <script>
+    getStoreValues();
+  </script>
+</html>

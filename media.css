@@ -1,0 +1,55 @@
+h1{
+  font-family: "Courier New", Courier, monospace;
+  color: brown;
+  text-align: center;
+}
+h2,h3,h4,h5 {
+  text-align: center;
+  font-size: 30px;
+  display: none;
+}
+img {
+  width: 100%;
+  /* display: block; */
+  margin: auto;
+}
+/* -------Mobile veiw---------- */
+
+@media (max-width: 500px) {
+    body{
+        background: green;
+    }
+    h2{
+        display: block;
+    }
+}
+/* --------tablet view------ */
+@media (min-width:501px) and (max-width:800px) {
+    body{
+        background: hotpink;
+    }
+    h3{
+        display: block;
+
+    }
+}
+/* ------laptop view--- */
+@media (min-width: 801px) and (max-width: 1200px) {
+  body {
+    background: linear-gradient(60deg, lightblue, green, yellow);
+  }
+  h4 {
+    display: block;
+    font-size: 40px;
+    color: red;
+  }
+}
+/*----------X-large view-----------  */
+@media (min-width: 1201px) {
+  body {
+    background-color: yellowgreen;
+  }
+  h5 {
+    display: block;
+  }
+}

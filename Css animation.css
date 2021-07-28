@@ -1,0 +1,20 @@
+body{
+    background-image: url();
+    background-size: auto;
+    display: block;
+}
+div{
+    display:inline-block ;
+    color: blue;
+    border-radius: 30px;
+
+}
+.image1:hover{
+    transform: rotate(30deg);
+
+}
+.image2:hover{
+    transform: rotate(60deg)  ;
+
+
+
